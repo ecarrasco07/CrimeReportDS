@@ -9,3 +9,6 @@ Latitude            FLOAT,
 Longitude           FLOAT,
 PRIMARY KEY (Call_Number)
 );
+
+--Selecting all elements from the Calls table and copying them into Crime for backups(Logan)
+INSERT INTO Crime SELECT * FROM Calls;
