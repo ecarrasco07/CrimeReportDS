@@ -9,5 +9,14 @@ Latitude            FLOAT,
 Longitude           FLOAT
 );
 
---Selecting all elements from the Calls table and copying them into Crime for backups(Logan)
 INSERT INTO Crime SELECT * FROM Calls;
+
+
+CREATE TABLE Historic_Real_Estate(
+PropertyID          VARCHAR2(255),
+PropType            VARCHAR2(255),
+Address             VARCHAR2(255),
+District            INT,
+Sale_Date           DATE,
+Sale_Price          INT
+);
