@@ -20,3 +20,31 @@ District            INT,
 Sale_Date           DATE,
 Sale_Price          INT
 );
+
+CREATE TABLE Historic_Crime(
+Call_Number         VARCHAR2(255),
+Date_Time           VARCHAR2(255),
+Reported_Year       INT,
+Reported_Month      INT,
+Address             VARCHAR2(255),
+Weapon_Used         VARCHAR2(255),
+ALD                 INT,
+NSP                 INT,
+Distric             INT,
+TRACT               INT,
+WARD                INT,
+ZIP                 INT,
+RoughX              VARCHAR2(255),
+RoughY              VARCHAR2(255),
+Arson               INT,
+AssaultOffense      INT,
+Burglary            INT,
+CriminalDamage      INT,
+Homicide            INT,
+LockedVehicle	    INT,
+Robbery	            INT,
+SexOffense	        INT,
+Theft	            INT,
+VehicleTheft        INT
+);
+
