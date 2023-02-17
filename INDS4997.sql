@@ -17,7 +17,7 @@ PropertyID          VARCHAR2(255),
 PropType            VARCHAR2(255),
 Address             VARCHAR2(255),
 District            INT,
-Sale_Date           DATE,
+Sale_Date           VARCHAR2(255),
 Sale_Price          INT
 );
 
