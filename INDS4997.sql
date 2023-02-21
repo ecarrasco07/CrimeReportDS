@@ -12,7 +12,6 @@ Longitude           FLOAT
 TRUNCATE TABLE Crime;
 INSERT INTO Crime SELECT * FROM Calls;
 
-
 CREATE TABLE Historic_Real_Estate(
 PropertyID          VARCHAR2(255),
 PropType            VARCHAR2(255),
@@ -49,3 +48,18 @@ Theft	            INT,
 VehicleTheft        INT
 );
 
+CREATE TABLE Census(
+Tract           VARCHAR2(255),
+GeoID           VARCHAR2(255),
+Geometry        CLOB,
+Estimated_Pop   VARCHAR2(255),
+Male_Pop        VARCHAR2(255),
+Female_Pop      VARCHAR2(255),
+Median_Age      VARCHAR2(255),
+Median_Income   VARCHAR2(255),
+White_Pop       VARCHAR2(255),
+Black_Pop       VARCHAR2(255),
+Native_Pop      VARCHAR2(255),
+Hispanic_Pop    VARCHAR2(255),
+Income_Pov_Lvl  VARCHAR2(255)
+);
