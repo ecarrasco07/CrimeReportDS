@@ -9,6 +9,7 @@ Latitude            FLOAT,
 Longitude           FLOAT
 );
 
+TRUNCATE TABLE Crime;
 INSERT INTO Crime SELECT * FROM Calls;
 
 
