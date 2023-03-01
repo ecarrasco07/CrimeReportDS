@@ -13,12 +13,12 @@ TRUNCATE TABLE Crime;
 INSERT INTO Crime SELECT * FROM Calls;
 
 CREATE TABLE Historic_Real_Estate(
-PropertyID          VARCHAR2(255),
 PropType            VARCHAR2(255),
 Address             VARCHAR2(255),
-District            INT,
 Sale_Date           VARCHAR2(255),
-Sale_Price          INT
+Sale_Price          INT,
+Latitude            FLOAT,
+Longitude           FLOAT
 );
 
 CREATE TABLE Historic_Crime(
