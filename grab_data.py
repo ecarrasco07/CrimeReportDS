@@ -188,12 +188,12 @@ if __name__ == "__main__":
                     if pd.isna(longitude):
                         longitude = "NULL"
                     try:
-                        query = f"SELECT * FROM CALLS WHERE CALL_NUMBER = '{callnumber}' AND DATE_TIME = '{date}' AND LOCATION = '{location}' \
+                        query = f"SELECT * FROM CALLS_DUP WHERE CALL_NUMBER = '{callnumber}' AND DATE_TIME = '{date}' AND LOCATION = '{location}' \
                         AND POLICE_DISTRICT = '{district}' AND NATURE_OF_CALL = 'nature' AND STATUS = 'Service in Progress'"
                         response = cursor.execute(query).fetchall()
                         if response:
                             continue  # SKIP IF ALREADY EXISTS IN DATABASE
-                        query = f"INSERT INTO CALLS VALUES ('{callnumber}', '{date}', '{location}', '{district}', '{nature}', '{status}', {latitude}, {longitude})"    
+                        query = f"INSERT INTO CALLS_DUP VALUES ('{callnumber}', '{date}', '{location}', '{district}', '{nature}', '{status}', {latitude}, {longitude})"    
                         cursor.execute(query)
                     except Exception as e:
                         logging.warning("Error updating Database:", e)
