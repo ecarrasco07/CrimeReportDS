@@ -4,12 +4,12 @@ from censusgeocode import CensusGeocode
 import censusgeocode as cg 
 
 '''
-GEOID function for adding col to large csv file.
-Takes a csv file path as param
-
-'''
+    GEOID function for adding col to large csv file.
+    Takes a csv file path as param
+    
+    '''
 def mass_geoid(path = "/Users/eduardo/Downloads/crimedata.csv"):
-
+    
     def geocode_row(row):
         cg = CensusGeocode()
         census_tract = cg.coordinates(x=row.Longitude, y=row.Latitude)['Census Tracts'][0]['GEOID']
